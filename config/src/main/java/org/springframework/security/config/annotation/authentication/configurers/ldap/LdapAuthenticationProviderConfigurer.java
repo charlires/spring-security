@@ -487,7 +487,7 @@ public class LdapAuthenticationProviderConfigurer<B extends ProviderManagerBuild
             if(url == null) {
                 return "ldap://127.0.0.1:" + port + "/" + root;
             }
-            return url;
+            return url + ":" port + "/" + root;
         }
 
         private ContextSourceBuilder() {}
